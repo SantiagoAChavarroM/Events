@@ -1,0 +1,184 @@
+/* Comentario (ES): Estilos base + responsive + menú hamburger (mobile-first). */
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: system-ui, Arial, sans-serif;
+  background: #f6f7fb;
+  color: #111;
+}
+
+#app {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 24px;
+}
+
+.card {
+  background: #fff;
+  border-radius: 14px;
+  padding: 16px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.06);
+}
+
+.row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+}
+
+.grid {
+  display: grid;
+  gap: 12px;
+}
+
+.grid.two {
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+}
+
+input,
+select,
+textarea,
+button {
+  font: inherit;
+}
+
+input,
+select,
+textarea {
+  width: 100%;
+  padding: 10px 12px;
+  border-radius: 10px;
+  border: 1px solid #d8dbe6;
+  outline: none;
+}
+
+button {
+  border: 0;
+  border-radius: 10px;
+  padding: 10px 12px;
+  cursor: pointer;
+}
+
+.primary {
+  background: #1a73e8;
+  color: #fff;
+}
+
+.secondary {
+  background: #e9eefc;
+  color: #1a73e8;
+}
+
+a {
+  color: #1a73e8;
+  text-decoration: none;
+}
+
+.small {
+  font-size: 12px;
+  opacity: 0.8;
+}
+
+.error {
+  color: #b00020;
+  font-size: 13px;
+}
+
+.success {
+  color: #0b7a2a;
+  font-size: 13px;
+}
+
+code {
+  background: #f1f3f9;
+  padding: 2px 6px;
+  border-radius: 6px;
+}
+
+/* =========================
+   Header / Nav
+========================= */
+
+/* Comentario (ES): En desktop, nav visible y alineado a la derecha */
+.toolbar {
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+  justify-content: flex-end;
+}
+
+.toolbar a {
+  padding: 8px 10px;
+  border-radius: 10px;
+  background: #f1f3f9;
+}
+
+.toolbar a:hover {
+  background: #e9eefc;
+}
+
+/* Comentario (ES): Botón hamburger (por defecto oculto en desktop) */
+.nav-toggle {
+  display: none;
+  background: #f1f3f9;
+  color: #111;
+  padding: 8px 10px;
+  border-radius: 10px;
+}
+
+/* =========================
+   Responsive
+========================= */
+@media (max-width: 900px) {
+  #app {
+    padding: 16px;
+  }
+}
+
+@media (max-width: 720px) {
+  .row {
+    flex-wrap: wrap;
+    justify-content: flex-start;
+  }
+
+  .grid.two {
+    grid-template-columns: 1fr;
+  }
+
+  /* Comentario (ES): En mobile, mostramos botón y ocultamos el nav hasta que se abra */
+  .nav-toggle {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+  }
+
+  .toolbar {
+    width: 100%;
+    justify-content: flex-start;
+    flex-direction: column;
+    align-items: stretch;
+    display: none; /* cerrado por defecto */
+  }
+
+  .toolbar.open {
+    display: flex; /* abierto */
+  }
+
+  .toolbar a {
+    width: 100%;
+  }
+}
+
+@media (max-width: 420px) {
+  #app {
+    padding: 12px;
+  }
+
+  .card {
+    padding: 14px;
+  }
+}

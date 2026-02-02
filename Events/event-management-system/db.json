@@ -1,0 +1,51 @@
+{
+  "users": [
+    {
+      "id": 1,
+      "name": "Admin User",
+      "email": "admin@ems.com",
+      "password": "Admin123!",
+      "role": "admin",
+      "createdAt": "2026-02-02T00:00:00.000Z"
+    },
+    {
+      "id": 2,
+      "name": "Visitor User",
+      "email": "visitor@ems.com",
+      "password": "Visitor123!",
+      "role": "visitor",
+      "createdAt": "2026-02-02T00:00:00.000Z"
+    },
+    {
+      "name": "santiago",
+      "email": "santi@correo.com",
+      "password": "12345678",
+      "role": "visitor",
+      "createdAt": "2026-02-02T12:37:27.348Z",
+      "id": 3
+    }
+  ],
+  "events": [
+    {
+      "id": 1,
+      "title": "JavaScript Bootcamp",
+      "description": "Hands-on SPA training with routing, CRUD, and auth.",
+      "date": "2026-02-20",
+      "time": "18:00",
+      "location": "Online",
+      "capacity": 1,
+      "registeredCount": 1,
+      "createdBy": 1,
+      "createdAt": "2026-02-02T00:00:00.000Z",
+      "updatedAt": "2026-02-02T12:35:45.800Z"
+    }
+  ],
+  "registrations": [
+    {
+      "id": 1,
+      "eventId": 1,
+      "userId": 2,
+      "createdAt": "2026-02-02T00:00:00.000Z"
+    }
+  ]
+}
